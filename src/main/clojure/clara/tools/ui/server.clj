@@ -103,7 +103,7 @@ html, body { margin:0; padding:0; overflow:hidden }
 
 (defonce ^:private server (atom nil))
 
-(def ^:private server-defaults {:port 8080 :join? false :host "127.0.0.1"})
+(def ^:private server-defaults {:port 8080 :join? false :host "localhost"})
 
 (defn start-server!
   "Starts a Jetty server to support the tools UI.  Optionally takes a
