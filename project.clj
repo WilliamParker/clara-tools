@@ -15,8 +15,7 @@
   :test-paths ["src/test/clojure"]
   :java-source-paths ["src/main/java"]
   :lein-release {:deploy-via :clojars}
-  :plugins [[lein-cljsbuild "1.1.0"]
-            [lein-ring "0.9.7"]]
+  :plugins [[lein-cljsbuild "1.1.0"]]
   :hooks [leiningen.cljsbuild]
 
   :cljsbuild {:builds
@@ -25,12 +24,6 @@
                            :output-to "resources/public/js/clara-tools.js"
                            :optimizations :whitespace
                            :pretty-print true}}]}
-
-  ; See https://github.com/weavejester/lein-ring#web-server-options for the
-  ; various options available for the lein-ring plugin
-  :ring {:handler clara.tools.ui.server/routes
-         :nrepl {:start? true
-                 :port 9998}}
 
   :scm {:name "git"
         :url "https://github.com/rbrush/clara-tools"}
